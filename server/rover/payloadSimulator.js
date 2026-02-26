@@ -1,4 +1,4 @@
-// ─── Zephyra Payload Simulator ─────────────────────────────────────
+// ─── FAB_05 Payload Simulator ─────────────────────────────────────
 // Simulates the rover's payload compartment lock mechanism.
 
 let payload = {
@@ -30,3 +30,4 @@ function reset() {
 }
 
 module.exports = { unlock, lock, getStatus, reset };
+

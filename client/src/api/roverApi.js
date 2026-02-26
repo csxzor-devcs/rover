@@ -1,4 +1,4 @@
-// ─── Zephyra v2 API Client ─────────────────────────────────────────
+// ─── FAB_05 v2 API Client ─────────────────────────────────────────
 
 const BASE = '/api';
 
@@ -79,3 +79,4 @@ export function getLogs(filter = {}) {
 export function clearLogs() {
     return request('/logs', { method: 'DELETE' });
 }
+

@@ -71,8 +71,8 @@ export default function UserDashboard() {
         return (
             <div className="flex items-center justify-center h-[80vh]">
                 <div className="text-center">
-                    <div className="w-8 h-8 border-2 border-zephyra-cyan border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-                    <p className="text-zephyra-muted text-sm font-mono">Connecting...</p>
+                    <div className="w-8 h-8 border-2 border-FAB_05-cyan border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+                    <p className="text-FAB_05-muted text-sm font-mono">Connecting...</p>
                 </div>
             </div>
         );
@@ -92,18 +92,18 @@ export default function UserDashboard() {
             <div className="panel text-center space-y-5 py-10 relative overflow-hidden">
                 {/* Background glow for active states */}
                 {!isIdle && (
-                    <div className="absolute inset-0 bg-gradient-to-b from-zephyra-cyan/5 to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-FAB_05-cyan/5 to-transparent pointer-events-none" />
                 )}
 
                 <div className="relative">
                     <div className="text-5xl mb-4">{msg.icon}</div>
-                    <h2 className="text-xl font-semibold text-zephyra-text mb-2">{msg.title}</h2>
-                    <p className="text-sm text-zephyra-muted max-w-xs mx-auto">{msg.subtitle}</p>
+                    <h2 className="text-xl font-semibold text-FAB_05-text mb-2">{msg.title}</h2>
+                    <p className="text-sm text-FAB_05-muted max-w-xs mx-auto">{msg.subtitle}</p>
 
                     {mission && (
-                        <div className="mt-4 inline-flex items-center gap-2 bg-zephyra-bg rounded-full px-4 py-1.5">
-                            <span className="text-xs font-mono text-zephyra-muted">Room</span>
-                            <span className="text-sm font-mono font-bold text-zephyra-cyan">{mission.room}</span>
+                        <div className="mt-4 inline-flex items-center gap-2 bg-FAB_05-bg rounded-full px-4 py-1.5">
+                            <span className="text-xs font-mono text-FAB_05-muted">Room</span>
+                            <span className="text-sm font-mono font-bold text-FAB_05-cyan">{mission.room}</span>
                         </div>
                     )}
                 </div>
@@ -115,18 +115,18 @@ export default function UserDashboard() {
             {isNavigating && mission && (
                 <div className="panel space-y-3">
                     <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono text-zephyra-muted">En Route</span>
+                        <span className="text-xs font-mono text-FAB_05-muted">En Route</span>
                         <span className="text-sm font-mono font-bold text-blue-400">{mission.progress || 0}%</span>
                     </div>
-                    <div className="h-2.5 bg-zephyra-bg rounded-full overflow-hidden">
+                    <div className="h-2.5 bg-FAB_05-bg rounded-full overflow-hidden">
                         <div
-                            className="h-full rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-zephyra-cyan transition-all duration-1000 relative"
+                            className="h-full rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-FAB_05-cyan transition-all duration-1000 relative"
                             style={{ width: `${mission.progress || 0}%` }}
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/20 animate-pulse" />
                         </div>
                     </div>
-                    <div className="flex justify-between text-[10px] font-mono text-zephyra-muted">
+                    <div className="flex justify-between text-[10px] font-mono text-FAB_05-muted">
                         <span>Base</span>
                         <span>Room {mission.room}</span>
                     </div>
@@ -136,17 +136,17 @@ export default function UserDashboard() {
             {/* ─── Countdown Timer ─── */}
             {isWaiting && countdown !== null && (
                 <div className="panel text-center py-6 space-y-3">
-                    <div className="text-[10px] font-mono text-zephyra-muted uppercase tracking-widest">Time Remaining</div>
+                    <div className="text-[10px] font-mono text-FAB_05-muted uppercase tracking-widest">Time Remaining</div>
                     <div className={`text-4xl font-mono font-bold ${countdown <= 30 ? 'text-red-400 animate-pulse' : 'text-amber-400'}`}>
                         {Math.floor(countdown / 60)}:{String(countdown % 60).padStart(2, '0')}
                     </div>
-                    <div className="h-1.5 bg-zephyra-bg rounded-full overflow-hidden max-w-[200px] mx-auto">
+                    <div className="h-1.5 bg-FAB_05-bg rounded-full overflow-hidden max-w-[200px] mx-auto">
                         <div
                             className={`h-full rounded-full transition-all duration-1000 ${countdown <= 30 ? 'bg-red-500' : 'bg-amber-500'}`}
                             style={{ width: `${(countdown / (status.mission?.timeoutSeconds || 120)) * 100}%` }}
                         />
                     </div>
-                    <p className="text-[11px] text-zephyra-muted">
+                    <p className="text-[11px] text-FAB_05-muted">
                         Rover will return to base if not opened in time
                     </p>
                 </div>
@@ -189,8 +189,8 @@ export default function UserDashboard() {
                 <button
                     onClick={() => doAction(api.requestRedelivery)}
                     className="w-full py-4 rounded-xl text-sm font-medium transition-all duration-300
-            bg-zephyra-surface border border-zephyra-border
-            text-zephyra-muted hover:text-zephyra-text hover:border-zephyra-cyan/30
+            bg-FAB_05-surface border border-FAB_05-border
+            text-FAB_05-muted hover:text-FAB_05-text hover:border-FAB_05-cyan/30
             active:scale-[0.98] flex items-center justify-center gap-2"
                     id="btn-redelivery"
                 >
@@ -207,9 +207,10 @@ export default function UserDashboard() {
             )}
 
             {/* ─── Footer ─── */}
-            <div className="text-center text-[10px] font-mono text-zephyra-muted/40 mt-auto pt-4">
-                Zephyra Delivery System · Simulation Mode
+            <div className="text-center text-[10px] font-mono text-FAB_05-muted/40 mt-auto pt-4">
+                FAB_05 Delivery System · Simulation Mode
             </div>
         </div>
     );
 }
+

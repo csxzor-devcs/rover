@@ -1,4 +1,4 @@
-// ─── Zephyra v2 Server Entry Point ─────────────────────────────────
+// ─── FAB_05 v2 Server Entry Point ─────────────────────────────────
 const express = require('express');
 const cors = require('cors');
 const roverRoutes = require('./routes/roverRoutes');
@@ -29,7 +29,7 @@ app.use('/api/logs', logRoutes);
 // Health check
 app.get('/api/health', (req, res) => {
     res.json({
-        service: 'Zephyra Delivery Control System',
+        service: 'FAB_05 Delivery Control System',
         status: 'online',
         version: '2.0.0',
         uptime: process.uptime(),
@@ -49,10 +49,11 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-    addLog('INFO', `Zephyra v2 server started on port ${PORT}`, 'SYSTEM');
-    console.log(`\n  📦 Zephyra Delivery Control System v2`);
+    addLog('INFO', `FAB_05 v2 server started on port ${PORT}`, 'SYSTEM');
+    console.log(`\n  📦 FAB_05 Delivery Control System v2`);
     console.log(`  ───────────────────────────────────────`);
     console.log(`  Server running on http://localhost:${PORT}`);
     console.log(`  API:    http://localhost:${PORT}/api/rover/status`);
     console.log(`  Health: http://localhost:${PORT}/api/health\n`);
 });
+

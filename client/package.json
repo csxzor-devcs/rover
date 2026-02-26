@@ -1,7 +1,7 @@
 {
-    "name": "zephyra-client",
+    "name": "FAB_05-client",
     "version": "1.0.0",
-    "description": "Zephyra Rover Control Dashboard",
+    "description": "FAB_05 Rover Control Dashboard",
     "type": "module",
     "scripts": {
         "dev": "vite",

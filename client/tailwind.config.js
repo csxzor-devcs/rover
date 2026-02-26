@@ -4,18 +4,18 @@ export default {
     theme: {
         extend: {
             colors: {
-                'zephyra-bg': '#0a0e17',
-                'zephyra-surface': '#111827',
-                'zephyra-surface-light': '#1f2937',
-                'zephyra-border': '#374151',
-                'zephyra-cyan': '#22d3ee',
-                'zephyra-cyan-dim': '#164e63',
-                'zephyra-green': '#10b981',
-                'zephyra-amber': '#f59e0b',
-                'zephyra-red': '#ef4444',
-                'zephyra-purple': '#a78bfa',
-                'zephyra-text': '#e5e7eb',
-                'zephyra-muted': '#6b7280',
+                'FAB_05-bg': '#0a0e17',
+                'FAB_05-surface': '#111827',
+                'FAB_05-surface-light': '#1f2937',
+                'FAB_05-border': '#374151',
+                'FAB_05-cyan': '#22d3ee',
+                'FAB_05-cyan-dim': '#164e63',
+                'FAB_05-green': '#10b981',
+                'FAB_05-amber': '#f59e0b',
+                'FAB_05-red': '#ef4444',
+                'FAB_05-purple': '#a78bfa',
+                'FAB_05-text': '#e5e7eb',
+                'FAB_05-muted': '#6b7280',
             },
             fontFamily: {
                 mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'],
@@ -35,3 +35,4 @@ export default {
     },
     plugins: [],
 };
+

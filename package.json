@@ -1,5 +1,5 @@
 {
-  "name": "zephyra",
+  "name": "FAB_05",
   "version": "1.0.0",
   "description": "Autonomous Stair-Climbing Rover Control System",
   "private": true,
@@ -16,3 +16,4 @@
     "concurrently": "^9.2.1"
   }
 }
+

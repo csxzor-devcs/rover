@@ -1,4 +1,4 @@
-// ─── Zephyra v2 — Mission Simulator Orchestrator ──────────────────
+// ─── FAB_05 v2 — Mission Simulator Orchestrator ──────────────────
 // Wires state machine + mission service + motors + payload + logs.
 // Handles the complete delivery lifecycle with auto-progress simulation.
 
@@ -261,3 +261,4 @@ module.exports = {
     manualOverride, stopManual,
     getStatus, resetRover,
 };
+

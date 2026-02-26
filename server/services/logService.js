@@ -1,4 +1,4 @@
-// ─── Zephyra Log Service ───────────────────────────────────────────
+// ─── FAB_05 Log Service ───────────────────────────────────────────
 // In-memory structured logging with level filtering.
 
 const { v4: uuidv4 } = require('uuid');
@@ -48,3 +48,4 @@ function getLogCount() {
 }
 
 module.exports = { addLog, getLogs, clearLogs, getLogCount, LEVELS };
+

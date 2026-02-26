@@ -1,7 +1,7 @@
 {
-    "name": "zephyra-server",
+    "name": "FAB_05-server",
     "version": "1.0.0",
-    "description": "Zephyra Rover Backend API & Simulator",
+    "description": "FAB_05 Rover Backend API & Simulator",
     "main": "index.js",
     "scripts": {
         "dev": "node --watch index.js",

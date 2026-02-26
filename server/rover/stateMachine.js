@@ -1,4 +1,4 @@
-// ─── Zephyra v2 — Delivery State Machine ──────────────────────────
+// ─── FAB_05 v2 — Delivery State Machine ──────────────────────────
 // 9-state deterministic FSM for autonomous delivery missions.
 
 const STATES = {
@@ -96,3 +96,4 @@ function getValidCommands(state) {
 }
 
 module.exports = { STATES, COMMANDS, TRANSITIONS, transition, getValidCommands };
+

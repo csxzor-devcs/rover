@@ -21,33 +21,34 @@
 
 @layer components {
   .panel {
-    @apply bg-zephyra-surface border border-zephyra-border rounded-xl p-4;
+    @apply bg-FAB_05-surface border border-FAB_05-border rounded-xl p-4;
   }
   .panel-header {
-    @apply text-xs font-mono uppercase tracking-widest text-zephyra-muted mb-3 flex items-center gap-2;
+    @apply text-xs font-mono uppercase tracking-widest text-FAB_05-muted mb-3 flex items-center gap-2;
   }
   .panel-header::before {
     content: '';
-    @apply w-2 h-2 rounded-full bg-zephyra-cyan inline-block;
+    @apply w-2 h-2 rounded-full bg-FAB_05-cyan inline-block;
   }
   .btn {
     @apply px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ease-out
            border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2
-           focus:ring-offset-zephyra-bg active:scale-95;
+           focus:ring-offset-FAB_05-bg active:scale-95;
   }
   .btn-primary {
-    @apply btn bg-zephyra-cyan text-zephyra-bg hover:bg-cyan-300 focus:ring-zephyra-cyan;
+    @apply btn bg-FAB_05-cyan text-FAB_05-bg hover:bg-cyan-300 focus:ring-FAB_05-cyan;
   }
   .btn-danger {
-    @apply btn bg-zephyra-red/20 text-zephyra-red border-zephyra-red/30
-           hover:bg-zephyra-red/30 focus:ring-zephyra-red;
+    @apply btn bg-FAB_05-red/20 text-FAB_05-red border-FAB_05-red/30
+           hover:bg-FAB_05-red/30 focus:ring-FAB_05-red;
   }
   .btn-ghost {
-    @apply btn bg-zephyra-surface-light text-zephyra-text border-zephyra-border
-           hover:bg-zephyra-border focus:ring-zephyra-border;
+    @apply btn bg-FAB_05-surface-light text-FAB_05-text border-FAB_05-border
+           hover:bg-FAB_05-border focus:ring-FAB_05-border;
   }
   .btn-amber {
-    @apply btn bg-zephyra-amber/20 text-zephyra-amber border-zephyra-amber/30
-           hover:bg-zephyra-amber/30 focus:ring-zephyra-amber;
+    @apply btn bg-FAB_05-amber/20 text-FAB_05-amber border-FAB_05-amber/30
+           hover:bg-FAB_05-amber/30 focus:ring-FAB_05-amber;
   }
 }
+

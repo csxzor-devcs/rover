@@ -55,9 +55,9 @@ export default function AdminDashboard() {
         return (
             <div className="flex items-center justify-center h-[80vh]">
                 <div className="text-center">
-                    <div className="w-8 h-8 border-2 border-zephyra-cyan border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-                    <p className="text-zephyra-muted text-sm font-mono">Connecting to rover...</p>
-                    {error && <p className="text-zephyra-red text-xs mt-2">{error}</p>}
+                    <div className="w-8 h-8 border-2 border-FAB_05-cyan border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+                    <p className="text-FAB_05-muted text-sm font-mono">Connecting to rover...</p>
+                    {error && <p className="text-FAB_05-red text-xs mt-2">{error}</p>}
                 </div>
             </div>
         );
@@ -80,15 +80,15 @@ export default function AdminDashboard() {
                 <StatusBadge state={status.state} size="lg" />
                 {mission && (
                     <div className="flex items-center gap-3 ml-4">
-                        <span className="text-xs font-mono text-zephyra-muted">ROOM</span>
-                        <span className="text-lg font-bold text-zephyra-cyan font-mono">{mission.room}</span>
-                        <div className="w-32 h-2 bg-zephyra-bg rounded-full overflow-hidden">
+                        <span className="text-xs font-mono text-FAB_05-muted">ROOM</span>
+                        <span className="text-lg font-bold text-FAB_05-cyan font-mono">{mission.room}</span>
+                        <div className="w-32 h-2 bg-FAB_05-bg rounded-full overflow-hidden">
                             <div
-                                className="h-full bg-gradient-to-r from-blue-500 to-zephyra-cyan rounded-full transition-all duration-700"
+                                className="h-full bg-gradient-to-r from-blue-500 to-FAB_05-cyan rounded-full transition-all duration-700"
                                 style={{ width: `${mission.progress || 0}%` }}
                             />
                         </div>
-                        <span className="text-xs font-mono text-zephyra-cyan">{mission.progress || 0}%</span>
+                        <span className="text-xs font-mono text-FAB_05-cyan">{mission.progress || 0}%</span>
                     </div>
                 )}
                 <div className="ml-auto flex gap-2">
@@ -112,7 +112,7 @@ export default function AdminDashboard() {
                                 placeholder="Room #"
                                 value={room}
                                 onChange={(e) => setRoom(e.target.value)}
-                                className="flex-1 bg-zephyra-bg border border-zephyra-border rounded-lg px-3 py-2 text-sm font-mono text-zephyra-text placeholder:text-zephyra-muted/50 focus:outline-none focus:border-zephyra-cyan transition-colors"
+                                className="flex-1 bg-FAB_05-bg border border-FAB_05-border rounded-lg px-3 py-2 text-sm font-mono text-FAB_05-text placeholder:text-FAB_05-muted/50 focus:outline-none focus:border-FAB_05-cyan transition-colors"
                                 id="room-input"
                             />
                             <button
@@ -131,8 +131,8 @@ export default function AdminDashboard() {
                                     key={r}
                                     onClick={() => setRoom(r)}
                                     className={`px-2 py-1 rounded text-[11px] font-mono transition-all ${room === r
-                                        ? 'bg-zephyra-cyan text-zephyra-bg'
-                                        : 'bg-zephyra-bg text-zephyra-muted hover:text-zephyra-text border border-zephyra-border'
+                                        ? 'bg-FAB_05-cyan text-FAB_05-bg'
+                                        : 'bg-FAB_05-bg text-FAB_05-muted hover:text-FAB_05-text border border-FAB_05-border'
                                         }`}
                                 >
                                     {r}
@@ -140,7 +140,7 @@ export default function AdminDashboard() {
                             ))}
                         </div>
                         {!isIdle && !isManual && (
-                            <div className="text-[10px] text-zephyra-amber font-mono">⚠ Mission in progress — dispatch disabled</div>
+                            <div className="text-[10px] text-FAB_05-amber font-mono">⚠ Mission in progress — dispatch disabled</div>
                         )}
                     </div>
 
@@ -157,15 +157,15 @@ export default function AdminDashboard() {
                                     { label: 'Completed', time: mission.completedTime, done: !!mission.completedTime },
                                 ].map((step, i) => (
                                     <div key={i} className="flex items-center gap-3">
-                                        <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] shrink-0 ${step.done ? 'bg-zephyra-cyan text-zephyra-bg' : 'bg-zephyra-surface-light text-zephyra-muted'
+                                        <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] shrink-0 ${step.done ? 'bg-FAB_05-cyan text-FAB_05-bg' : 'bg-FAB_05-surface-light text-FAB_05-muted'
                                             }`}>
                                             {step.done ? '✓' : i + 1}
                                         </div>
-                                        <span className={`text-xs ${step.done ? 'text-zephyra-text' : 'text-zephyra-muted/50'}`}>
+                                        <span className={`text-xs ${step.done ? 'text-FAB_05-text' : 'text-FAB_05-muted/50'}`}>
                                             {step.label}
                                         </span>
                                         {step.time && (
-                                            <span className="text-[10px] font-mono text-zephyra-muted ml-auto">
+                                            <span className="text-[10px] font-mono text-FAB_05-muted ml-auto">
                                                 {new Date(step.time).toLocaleTimeString()}
                                             </span>
                                         )}
@@ -188,32 +188,32 @@ export default function AdminDashboard() {
                         </div>
 
                         <div className="grid grid-cols-2 gap-3 text-xs font-mono">
-                            <div className="bg-zephyra-bg rounded-lg p-2.5">
-                                <div className="text-zephyra-muted text-[10px] mb-1">PAYLOAD</div>
+                            <div className="bg-FAB_05-bg rounded-lg p-2.5">
+                                <div className="text-FAB_05-muted text-[10px] mb-1">PAYLOAD</div>
                                 <div className={`font-semibold ${status.payload?.locked ? 'text-emerald-400' : 'text-amber-400'}`}>
                                     {status.payload?.locked ? '🔒 Locked' : '🔓 Unlocked'}
                                 </div>
                             </div>
-                            <div className="bg-zephyra-bg rounded-lg p-2.5">
-                                <div className="text-zephyra-muted text-[10px] mb-1">MISSION</div>
-                                <div className="text-zephyra-text font-semibold">
+                            <div className="bg-FAB_05-bg rounded-lg p-2.5">
+                                <div className="text-FAB_05-muted text-[10px] mb-1">MISSION</div>
+                                <div className="text-FAB_05-text font-semibold">
                                     {mission ? `Room ${mission.room}` : 'None'}
                                 </div>
                             </div>
                         </div>
 
                         {/* State History */}
-                        <div className="border-t border-zephyra-border pt-3 mt-2">
-                            <div className="text-[10px] font-mono text-zephyra-muted uppercase mb-2">Recent Transitions</div>
+                        <div className="border-t border-FAB_05-border pt-3 mt-2">
+                            <div className="text-[10px] font-mono text-FAB_05-muted uppercase mb-2">Recent Transitions</div>
                             <div className="space-y-0.5 max-h-[150px] overflow-y-auto">
                                 {history.slice(0, 8).map((h, i) => (
                                     <div key={i} className="flex items-center gap-1.5 text-[10px] font-mono py-0.5">
-                                        <span className="text-zephyra-muted min-w-[48px]">
+                                        <span className="text-FAB_05-muted min-w-[48px]">
                                             {new Date(h.timestamp).toLocaleTimeString()}
                                         </span>
-                                        <span className="text-zephyra-muted">{h.from || '—'}</span>
-                                        <span className="text-zephyra-cyan">→</span>
-                                        <span className="text-zephyra-text">{h.to}</span>
+                                        <span className="text-FAB_05-muted">{h.from || '—'}</span>
+                                        <span className="text-FAB_05-cyan">→</span>
+                                        <span className="text-FAB_05-text">{h.to}</span>
                                     </div>
                                 ))}
                             </div>
@@ -237,19 +237,19 @@ export default function AdminDashboard() {
                     <div className="panel">
                         <div className="panel-header">Mission History</div>
                         {missionHist.length === 0 ? (
-                            <div className="text-center py-4 text-xs text-zephyra-muted">No completed missions</div>
+                            <div className="text-center py-4 text-xs text-FAB_05-muted">No completed missions</div>
                         ) : (
                             <div className="space-y-1.5 max-h-[200px] overflow-y-auto">
                                 {missionHist.map((m) => (
-                                    <div key={m.missionId} className="flex items-center gap-2 text-[11px] font-mono bg-zephyra-bg rounded-lg px-3 py-2">
+                                    <div key={m.missionId} className="flex items-center gap-2 text-[11px] font-mono bg-FAB_05-bg rounded-lg px-3 py-2">
                                         <span className={`w-2 h-2 rounded-full ${m.status === 'COMPLETED' ? 'bg-emerald-500' :
                                             m.status === 'RETURNED' ? 'bg-amber-500' : 'bg-red-500'
                                             }`} />
-                                        <span className="text-zephyra-text font-semibold">Room {m.room}</span>
-                                        <span className="text-zephyra-muted ml-auto">
+                                        <span className="text-FAB_05-text font-semibold">Room {m.room}</span>
+                                        <span className="text-FAB_05-muted ml-auto">
                                             {m.status}
                                         </span>
-                                        <span className="text-zephyra-muted/50 text-[10px]">
+                                        <span className="text-FAB_05-muted/50 text-[10px]">
                                             {new Date(m.startTime).toLocaleTimeString()}
                                         </span>
                                     </div>
@@ -262,3 +262,4 @@ export default function AdminDashboard() {
         </div >
     );
 }
+

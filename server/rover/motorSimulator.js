@@ -1,4 +1,4 @@
-// ─── Zephyra Motor Simulator ───────────────────────────────────────
+// ─── FAB_05 Motor Simulator ───────────────────────────────────────
 // Simulates 8 DC motors (4 left bank, 4 right bank).
 // Each motor tracks speed, direction, and operational status.
 
@@ -85,3 +85,4 @@ function setMotorFault(motorId) {
 }
 
 module.exports = { setMotors, stopAll, getMotors, resetMotors, setMotorFault, MOTOR_COUNT };
+
